@@ -1,0 +1,100 @@
+{
+  "name": "angular8-webpack4",
+  "version": "0.0.1",
+  "description": "Projeto base utilizando angular8 e webpack4",
+  "scripts": {
+    "build:dev": "npm run clean:dist && npm run webpack -- --config config/webpack.dev.js --mode development --progress --profile",
+    "build:prod": "npm run clean:dist && npm run webpack -- --config config/webpack.prod.js  --progress --profile --bail",
+    "build": "npm run build:dev",
+    "clean:dist": "npm run rimraf -- dist",
+    "clean:install": "npm set progress=false && npm install",
+    "lint": "eslint '*/**/*.ts'",
+    "rimraf": "rimraf",
+    "server:dev": "npm run webpack-dev-server -- --config config/webpack.dev.js --progress --profile --watch --content-base src/",
+    "server": "npm run server:dev",
+    "start": "npm run server:dev",
+    "webpack-dev-server": "node --max_old_space_size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot",
+    "webpack": "node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js"
+  },
+  "dependencies": {
+    "@angular/animations": "^8.2.14",
+    "@angular/cdk": "^8.2.3",
+    "@angular/common": "^8.2.14",
+    "@angular/compiler": "^8.2.14",
+    "@angular/core": "^8.2.14",
+    "@angular/forms": "^8.2.14",
+    "@angular/material": "^8.2.3",
+    "@angular/material-moment-adapter": "~8.2.3",
+    "@angular/platform-browser": "^8.2.14",
+    "@angular/platform-browser-dynamic": "^8.2.14",
+    "@angular/platform-server": "^8.2.14",
+    "@angular/router": "^8.2.14",
+    "core-js": "3.6.4",
+    "file-saver": "^1.3.8",
+    "material-design-icons": "^3.0.1",
+    "moment": "^2.20.1",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^6.4.0",
+    "zone.js": "^0.9.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-optimizer": "^0.6.8",
+    "@angular/cli": "^7.0.3",
+    "@angular/compiler-cli": "^8.2.14",
+    "@angular/language-service": "^8.2.14",
+    "@ngtools/webpack": "8.3.24",
+    "@types/hammerjs": "^2.0.35",
+    "@types/node": "^10.3.5",
+    "@types/uglify-js": "^3.0.2",
+    "@types/webpack": "^4.4.2",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
+    "copy-webpack-plugin": "^5.0.2",
+    "css-loader": "^3.0.0",
+    "mini-css-extract-plugin": "0.9.0",
+    "file-loader": "^5.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "eslint": "^7.18.0",
+    "json-loader": "^0.5.7",
+    "node-sass": "^4.13.1",
+    "raw-loader": "^1.0.0",
+    "read-yaml": "^1.1.0",
+    "rimraf": "~2.6.2",
+    "sass-loader": "^7.0.3",
+    "script-ext-html-webpack-plugin": "^2.1.4",
+    "style-loader": "^1.1.3",
+    "to-string-loader": "^1.1.5",
+    "ts-node": "^8.6.2",
+    "tslib": "^1.9.3",
+    "typescript": "~3.5.3",
+    "terser-webpack-plugin": "^1.4.5",
+    "webpack": "^4.41.6",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-middleware": "^3.1.3",
+    "webpack-dev-server": "~3.10.3",
+    "webpack-inline-manifest-plugin": "^4.0.1",
+    "webpack-merge": "~4.1.3",
+    "yaml-loader": "^0.5.0"
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 5"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.webpack.json"
+    },
+    "extends": [
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off"
+    }
+  },
+  "eslintIgnore": [
+    "**/node_modules/*",
+    "**/src/*.d.ts"
+  ]
+}

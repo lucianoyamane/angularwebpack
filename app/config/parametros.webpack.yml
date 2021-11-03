@@ -1,0 +1,7 @@
+dev:
+    server:
+        host: localhost
+        port: 3500
+build:
+    mode: aot
+    # mode: jit
