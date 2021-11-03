@@ -82,9 +82,6 @@
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "project": "./tsconfig.webpack.json"
-    },
     "extends": [
       "plugin:@typescript-eslint/recommended"
     ],

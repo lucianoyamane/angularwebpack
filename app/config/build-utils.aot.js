@@ -10,7 +10,7 @@ const DEFAULT_METADATA = {
   baseUrl: './',
   isDevServer: helpers.isWebpackDevServer(),
   WATCH: helpers.hasProcessFlag('watch'),
-  tsConfigPath: 'tsconfig.webpack.json',
+  tsConfigPath: 'tsconfig.json',
   isProduction: function() {
     return this.env && this.env == 'production';
   }
