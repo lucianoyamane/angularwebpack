@@ -4,7 +4,7 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { MatSidenavModule, MatIconModule, MatGridListModule, MatToolbarModule, MatMenuModule, MatStepperModule, MatTabsModule } from '@angular/material';
+import { MatSidenavModule, MatIconModule, MatGridListModule, MatToolbarModule, MatMenuModule, MatStepperModule, MatTabsModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ROUTES } from './app.routes';
@@ -35,7 +35,9 @@ import "../styles/styles.scss"
     MatToolbarModule,
     MatMenuModule,
     MatStepperModule,
-    MatTabsModule
+    MatTabsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [
     HttpClientModule
