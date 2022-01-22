@@ -136,11 +136,12 @@ module.exports = function () {
     node: {
       global: true,
       crypto: 'empty',
-      process: true,
+      process: false,
       module: false,
       clearImmediate: false,
       setImmediate: false,
-      fs: 'empty'
+      fs: 'empty',
+      Buffer: false
     }
 
   });

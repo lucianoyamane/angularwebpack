@@ -162,7 +162,8 @@ module.exports = function () {
       module: false,
       clearImmediate: false,
       setImmediate: false,
-      fs: 'empty'
+      fs: 'empty',
+      Buffer: false
     }
 
   });

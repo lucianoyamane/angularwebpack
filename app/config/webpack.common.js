@@ -175,9 +175,9 @@ module.exports = function (metadata) {
        *
        * See: https://www.npmjs.com/package/copy-webpack-plugin
        */
-      new CopyWebpackPlugin([
+      new CopyWebpackPlugin({patterns:[
         { from: 'src/assets', to: 'assets' }
-      ]),
+      ]}),
 
       /*
       * Plugin: HtmlWebpackPlugin
@@ -235,10 +235,11 @@ module.exports = function (metadata) {
     node: {
       global: true,
       crypto: 'empty',
-      process: true,
+      process: false,
       module: false,
       clearImmediate: false,
-      setImmediate: false
+      setImmediate: false,
+      Buffer: false
     }
 
   };
