@@ -28,9 +28,11 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '13'
-      - run: cd app/
-      - run: npm install
-      - run: npm run build:prod
+      - name: genDist
+        working-directory: ./app
+        run: |
+          npm install
+          npm run build:prod
 
       # Runs a set of commands using the runners shell
 #       - name: Run a multi-line script
