@@ -6,7 +6,7 @@
     "build:dev": "npm run clean:dist && npm run webpack -- --config config/webpack.dev.js --mode development --progress --profile",
     "build:prod": "npm run clean:dist && npm run webpack -- --config config/webpack.prod.js  --progress --profile --bail",
     "build": "npm run build:dev",
-    "clean:dist": "npm run rimraf -- ../docs",
+    "clean:dist": "npm run rimraf -- dist",
     "clean:install": "npm set progress=false && npm install",
     "lint": "eslint '*/**/*.ts'",
     "rimraf": "rimraf",
