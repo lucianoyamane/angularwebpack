@@ -45,7 +45,7 @@ module.exports = function () {
        *
        * See: https://webpack.js.org/configuration/output/#output-path
        */
-      path: helpers.root('dist'),
+      path: helpers.root('../docs'),
 
       /**
        * Specifies the name of each output file on disk.
